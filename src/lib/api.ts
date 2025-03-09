@@ -30,9 +30,7 @@ export async function lookupGooglePlaceId(
     }
 
     // Use the Google Places API to find the Place ID
-    const apiKey =
-      process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ||
-      "AIzaSyAn3TqS6WgdJTkAxedfU3JinAJ8GONmIrQ";
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "";
     const query = domain.replace(/^(https?:\/\/)?/, "").replace(/\/$/, "");
 
     try {
@@ -137,9 +135,7 @@ export async function fetchGoogleReviews(
     console.log(`Fetching Google reviews for place ID: ${placeId}`);
 
     // Use the Google Places API to fetch reviews
-    const apiKey =
-      process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ||
-      "AIzaSyAn3TqS6WgdJTkAxedfU3JinAJ8GONmIrQ";
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "";
 
     try {
       // Try to fetch real reviews from the Places API using a proxy to avoid CORS issues
